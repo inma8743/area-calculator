@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="평과 제곱미터를 실시간 변환하고 가로·세로 길이로 공간 면적과 평수를 계산하는 무료 평수 계산기입니다.">
+  <meta name="google-site-verification" content="iJYo0s5IVucjVPlcUXP11HltZW35jnzpXC0C4rTFapw">
+  <meta name="keywords" content="평수 계산기, 평 제곱미터 변환, 면적 계산기, 아파트 평수, 제곱미터 평">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0f766e">
+  <link rel="canonical" href="https://inma8743.github.io/area-calculator/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:title" content="평수 · 면적 계산기">
+  <meta property="og:description" content="평↔㎡ 변환과 가로×세로 면적을 한 번에 계산하세요.">
+  <meta property="og:url" content="https://inma8743.github.io/area-calculator/">
+  <title>평수 계산기 | 평·제곱미터·가로세로 면적 변환</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EZW95TCSF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3EZW95TCSF');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "평수 · 면적 계산기",
+    "url": "https://inma8743.github.io/area-calculator/",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "isAccessibleForFree": true,
+    "inLanguage": "ko-KR",
+    "description": "평과 제곱미터를 변환하고 가로 세로 길이로 면적을 계산하는 무료 도구입니다."
+  }
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4587553505034907" crossorigin="anonymous"></script>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: #18312f;
+      background: linear-gradient(145deg, #ecfdf8, #f8fafc 55%, #eef7ff);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    header, main, footer { width: min(920px, calc(100% - 32px)); margin: auto; }
+    header { padding: 48px 0 26px; text-align: center; }
+    h1 { margin: 0 0 10px; font-size: clamp(30px, 7vw, 48px); letter-spacing: -2px; }
+    header p { margin: 0; color: #57706d; }
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .card, .guide {
+      padding: 24px;
+      border: 1px solid rgba(15, 118, 110, .14);
+      border-radius: 22px;
+      background: rgba(255,255,255,.92);
+      box-shadow: 0 16px 44px rgba(15, 80, 75, .08);
+    }
+    .card h2, .guide h2 { margin: 0 0 18px; }
+    label { display: block; margin: 14px 0 7px; color: #45615e; font-size: 14px; font-weight: 700; }
+    .input-row { display: flex; align-items: center; gap: 8px; }
+    input {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #c8dcd9;
+      border-radius: 11px;
+      font: inherit;
+      outline: none;
+    }
+    input:focus { border-color: #0f766e; box-shadow: 0 0 0 3px rgba(15,118,110,.12); }
+    .unit { min-width: 34px; color: #57706d; font-weight: 700; }
+    .result {
+      margin-top: 18px;
+      padding: 16px;
+      border-radius: 14px;
+      color: #0f766e;
+      background: #e8faf6;
+      font-size: 21px;
+      font-weight: 800;
+      line-height: 1.5;
+    }
+    .guide { margin: 22px 0; line-height: 1.75; }
+    table { width: 100%; border-collapse: collapse; text-align: center; }
+    th, td { padding: 11px 7px; border-bottom: 1px solid #e0ecea; }
+    th { color: #0f766e; }
+    .tools a { display: inline-block; margin: 3px 8px 3px 0; color: #0f766e; }
+    .ad { min-height: 100px; margin: 20px auto; overflow: hidden; display: flex; justify-content: center; }
+    footer { padding: 12px 0 42px; text-align: center; color: #6b7c7a; font-size: 13px; }
+    footer a { color: inherit; }
+    @media (max-width: 680px) {
+      header { padding-top: 34px; }
+      .grid { grid-template-columns: 1fr; }
+      .card, .guide { padding: 20px; }
+      .ad iframe, .ad ins { max-width: 100% !important; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>평수 · 면적 계산기</h1>
+    <p>평, 제곱미터, 가로·세로 면적을 입력 즉시 변환하세요.</p>
+  </header>
+
+  <main>
+    <section class="grid">
+      <article class="card">
+        <h2>평 ↔ 제곱미터 변환</h2>
+        <label for="pyeong">평수</label>
+        <div class="input-row"><input id="pyeong" type="number" inputmode="decimal" placeholder="예: 32"><span class="unit">평</span></div>
+        <label for="square-meter">제곱미터</label>
+        <div class="input-row"><input id="square-meter" type="number" inputmode="decimal" placeholder="예: 105.79"><span class="unit">㎡</span></div>
+        <div id="convert-result" class="result">값을 입력해 주세요.</div>
+      </article>
+
+      <article class="card">
+        <h2>가로 × 세로 면적</h2>
+        <label for="width">가로 길이</label>
+        <div class="input-row"><input id="width" type="number" inputmode="decimal" placeholder="예: 5"><span class="unit">m</span></div>
+        <label for="height">세로 길이</label>
+        <div class="input-row"><input id="height" type="number" inputmode="decimal" placeholder="예: 4"><span class="unit">m</span></div>
+        <div id="dimension-result" class="result">면적: 0㎡ · 0평</div>
+      </article>
+    </section>
+
+    <div class="ad">
+      <script src="https://ads-partners.coupang.com/g.js"></script>
+      <script>
+        new PartnersCoupang.G({"id":991032,"template":"carousel","trackingCode":"AF5435387","width":"680","height":"140","tsource":""});
+      </script>
+    </div>
+
+    <section class="guide">
+      <h2>대표 아파트 면적 빠른표</h2>
+      <table>
+        <thead><tr><th>제곱미터</th><th>평</th><th>참고</th></tr></thead>
+        <tbody>
+          <tr><td>59㎡</td><td>17.85평</td><td>전용면적 기준</td></tr>
+          <tr><td>74㎡</td><td>22.39평</td><td>전용면적 기준</td></tr>
+          <tr><td>84㎡</td><td>25.41평</td><td>전용면적 기준</td></tr>
+          <tr><td>105㎡</td><td>31.76평</td><td>단순 환산</td></tr>
+          <tr><td>135㎡</td><td>40.84평</td><td>단순 환산</td></tr>
+        </tbody>
+      </table>
+      <h2 style="margin-top:28px;">계산 기준</h2>
+      <p><strong>평 × 3.3058 = ㎡</strong>, <strong>㎡ × 0.3025 = 평</strong>을 사용합니다. 아파트에서 흔히 말하는 평형은 공급면적을 의미할 수 있으므로, 전용면적을 단순 변환한 값과 실제 매물의 평형은 다를 수 있습니다.</p>
+      <h2>무료 도구 모음</h2>
+      <p class="tools">
+        <a href="https://json-formatter-eight-theta.vercel.app/">JSON 정렬기</a>
+        <a href="https://char-counter-ashen-seven.vercel.app/">글자 수 세기</a>
+        <a href="https://dday-calculator-seven.vercel.app/">디데이 계산기</a>
+        <a href="https://lotto-generate.vercel.app/">로또 번호 생성기</a>
+        <a href="https://percent-calculator-ten.vercel.app/">퍼센트 계산기</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>© 2026 평수 계산기 · <a href="/area-calculator/privacy.html">개인정보처리방침 · 광고 안내 · 문의</a></footer>
+
+  <script>
+    const PYEONG_TO_SQM = 3.3058;
+    const pyeongInput = document.getElementById('pyeong');
+    const sqmInput = document.getElementById('square-meter');
+    const widthInput = document.getElementById('width');
+    const heightInput = document.getElementById('height');
+    const tracked = new Set();
+
+    pyeongInput.addEventListener('input', () => convertFromPyeong());
+    sqmInput.addEventListener('input', () => convertFromSquareMeter());
+    widthInput.addEventListener('input', calculateDimensions);
+    heightInput.addEventListener('input', calculateDimensions);
+
+    function format(value) {
+      return Number(value).toLocaleString('ko-KR', { maximumFractionDigits: 4 });
+    }
+
+    function convertFromPyeong() {
+      const pyeong = Number(pyeongInput.value);
+      if (!Number.isFinite(pyeong) || pyeong < 0) return;
+      const sqm = pyeong * PYEONG_TO_SQM;
+      sqmInput.value = pyeongInput.value ? Number(sqm.toFixed(4)) : '';
+      document.getElementById('convert-result').textContent = `${format(pyeong)}평 = ${format(sqm)}㎡`;
+      trackOnce('pyeong');
+    }
+
+    function convertFromSquareMeter() {
+      const sqm = Number(sqmInput.value);
+      if (!Number.isFinite(sqm) || sqm < 0) return;
+      const pyeong = sqm / PYEONG_TO_SQM;
+      pyeongInput.value = sqmInput.value ? Number(pyeong.toFixed(4)) : '';
+      document.getElementById('convert-result').textContent = `${format(sqm)}㎡ = ${format(pyeong)}평`;
+      trackOnce('square_meter');
+    }
+
+    function calculateDimensions() {
+      const width = Number(widthInput.value) || 0;
+      const height = Number(heightInput.value) || 0;
+      const sqm = width * height;
+      const pyeong = sqm / PYEONG_TO_SQM;
+      document.getElementById('dimension-result').textContent =
+        `면적: ${format(sqm)}㎡ · ${format(pyeong)}평`;
+      if (width && height) trackOnce('dimensions');
+    }
+
+    function trackOnce(type) {
+      if (tracked.has(type)) return;
+      gtag('event', 'area_calculate', { calculator_type: type });
+      tracked.add(type);
+    }
+  </script>
+</body>
+</html>
