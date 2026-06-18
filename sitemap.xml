@@ -49,6 +49,24 @@
     <priority>0.84</priority>
   </url>
   <url>
+    <loc>https://area-calculator-dun.vercel.app/pyeong-conversion.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.86</priority>
+  </url>
+  <url>
+    <loc>https://area-calculator-dun.vercel.app/area-converter.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.86</priority>
+  </url>
+  <url>
+    <loc>https://area-calculator-dun.vercel.app/apartment-size-calculator.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.86</priority>
+  </url>
+  <url>
     <loc>https://area-calculator-dun.vercel.app/apartment-pyeong-table.html</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
