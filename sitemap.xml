@@ -37,6 +37,12 @@
     <priority>0.82</priority>
   </url>
   <url>
+    <loc>https://area-calculator-dun.vercel.app/24m2-to-pyeong.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
     <loc>https://area-calculator-dun.vercel.app/20-pyeong-to-m2.html</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -49,8 +55,20 @@
     <priority>0.84</priority>
   </url>
   <url>
+    <loc>https://area-calculator-dun.vercel.app/exclusive-real-area-calculator.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.84</priority>
+  </url>
+  <url>
     <loc>https://area-calculator-dun.vercel.app/pyeong-conversion.html</loc>
     <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.86</priority>
+  </url>
+  <url>
+    <loc>https://area-calculator-dun.vercel.app/pyeong-calculation.html</loc>
+    <lastmod>2026-06-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.86</priority>
   </url>
